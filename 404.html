@@ -6,11 +6,17 @@
 </head>
 <body>
     <script>
-        // Extract the full path after the domain
-        const path = window.location.pathname;
+        // Set this variable to true if you want to ignore the first path
+        const ignoreFirstPath = true;
+
+        // Extract the path after the domain
+        const fullPath = window.location.pathname;
+
+        // Extract the second path if configured to ignore the first path
+        const pathToUse = ignoreFirstPath ? fullPath.split('/').slice(2).join('/') : fullPath;
 
         // Redirect to the specified URL with the extracted path
-        window.location.href = `http://is.gd${path}`;
+        window.location.href = `http://is.gd/${pathToUse}`;
     </script>
 </body>
 </html>
