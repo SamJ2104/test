@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=http://is.gd/">
+</head>
+<body>
+    <script>
+        // Extract the full path after the domain
+        const path = window.location.pathname;
+
+        // Redirect to the specified URL with the extracted path
+        window.location.href = `http://is.gd${path}`;
+    </script>
+</body>
+</html>
